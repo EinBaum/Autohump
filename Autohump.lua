@@ -14,11 +14,11 @@ end
 	
 
 function HumpIntroduction()
-    DEFAULT_CHAT_FRAME:AddMessage("Pidisc Autohump AddOn Type /h help for the list of commands!", 1.0, 0.0, 0.0)
+    DEFAULT_CHAT_FRAME:AddMessage("Pidisc Autohump AddOn Type /ah help for the list of commands!", 1.0, 0.0, 0.0)
 end	
 	
 function AutohumpLoaded()
-	SLASH_HUMP1, SLASH_HUMP2 = '/H', '/Hs';
+	SLASH_HUMP1, SLASH_HUMP2 = '/AH', '/AUTOHUMP';
 	SlashCmdList["HUMP"] = function(msg)
 		HumpCommands(msg);
 	end
@@ -32,8 +32,8 @@ end
 function HumpCommands(msg)
         if (msg == "help"
 		    or msg == "Help") then
-		DEFAULT_CHAT_FRAME:AddMessage(" /h hump to hump or stop humping", 1.0, 0.0, 0.0)
-		DEFAULT_CHAT_FRAME:AddMessage(" /h afk to enable or disable auto afk humping", 1.0, 0.0, 0.0)
+		DEFAULT_CHAT_FRAME:AddMessage(" /ah hump to hump or stop humping", 1.0, 0.0, 0.0)
+		DEFAULT_CHAT_FRAME:AddMessage(" /ah afk to enable or disable auto afk humping", 1.0, 0.0, 0.0)
 		end
 		
 		if (msg == "hump"
