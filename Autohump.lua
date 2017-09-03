@@ -1,9 +1,9 @@
-Autohump = CreateFrame("FRAME");
-Autohump:RegisterEvent("ADDON_LOADED");
-Autohump:RegisterEvent("PLAYER_LOGIN");
-Autohump:RegisterEvent("CHAT_MSG_SYSTEM");
-Autohump:SetScript("OnUpdate", function() updateHandler() end);
-Autohump:SetScript("OnEvent", function() AutohumpEvents[event]() end);
+Autohump = CreateFrame("FRAME")
+Autohump:RegisterEvent("ADDON_LOADED")
+Autohump:RegisterEvent("PLAYER_LOGIN")
+Autohump:RegisterEvent("CHAT_MSG_SYSTEM")
+Autohump:SetScript("OnUpdate", function() updateHandler() end)
+Autohump:SetScript("OnEvent", function() AutohumpEvents[event]() end)
 
 function updateHandler()
 	if HUMPCONFIG.HUMPON == true then
@@ -16,9 +16,9 @@ function HumpIntroduction()
 end
 
 function AutohumpLoaded()
-	SLASH_HUMP1, SLASH_HUMP2 = '/AH', '/AUTOHUMP';
+	SLASH_HUMP1, SLASH_HUMP2 = '/AH', '/AUTOHUMP'
 	SlashCmdList["HUMP"] = function(msg)
-		HumpCommands(msg);
+		HumpCommands(msg)
 	end
 	if HUMPCONFIG == nil then
 	   HUMPCONFIG = { HUMPON = false, HUMPAFK = true }
@@ -60,12 +60,12 @@ function Hump()
 end
 
 function AutoHumpAFK()
-    if HUMPCONFIG.HUMPAFK == true and
-	    string.find(arg1, "You are now AFK") then
+    if HUMPCONFIG.HUMPAFK == true
+	and string.find(arg1, "You are now AFK") then
 		HUMPCONFIG.HUMPON = true
     end
 
-	if string.find(arg1, "You are no longer AFK") then
+	if arg1 == "You are no longer AFK" then
 	    HUMPCONFIG.HUMPON = false
 	end
 end
