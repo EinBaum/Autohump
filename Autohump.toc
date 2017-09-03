@@ -1,7 +1,7 @@
 ## Interface: 11200
 ## Title: Axm's Autohump
 ## Notes: "Hump your friends all day long!"
-## Author: Axm aka Pidisc @ Emerald Dream 
+## Author: Axm aka Pidisc @ Emerald Dream
 ## Version: 1.0
 ## SavedVariables: HUMPCONFIG
 Autohump.lua
